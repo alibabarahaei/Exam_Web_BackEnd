@@ -5,7 +5,17 @@
       "ProjectGuid": "92d4d37c-af51-45b7-90dc-d8604323472e",
       "DisplayName": "Exam_Web",
       "ColorIndex": 0
+    },
+    "35680a72-c30c-4031-8c68-76f2287c81dd": {
+      "ProjectGuid": "35680a72-c30c-4031-8c68-76f2287c81dd",
+      "DisplayName": "Exam_Web.DataLayer",
+      "ColorIndex": 1
+    },
+    "294f49da-bb6b-487c-99c5-cd727f092568": {
+      "ProjectGuid": "294f49da-bb6b-487c-99c5-cd727f092568",
+      "DisplayName": "Exam_Web.CoreLayer",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }
