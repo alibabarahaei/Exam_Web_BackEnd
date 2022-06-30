@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exam_Web", "Exam_Web\Exam_Web.csproj", "{92D4D37C-AF51-45B7-90DC-D8604323472E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam_Web.DataLayer", "Exam_Web.DataLayer\Exam_Web.DataLayer.csproj", "{35680A72-C30C-4031-8C68-76F2287C81DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exam_Web.DataLayer", "Exam_Web.DataLayer\Exam_Web.DataLayer.csproj", "{35680A72-C30C-4031-8C68-76F2287C81DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam_Web.CoreLayer", "Exam_Web.CoreLayer\Exam_Web.CoreLayer.csproj", "{294F49DA-BB6B-487C-99C5-CD727F092568}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exam_Web.CoreLayer", "Exam_Web.CoreLayer\Exam_Web.CoreLayer.csproj", "{294F49DA-BB6B-487C-99C5-CD727F092568}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

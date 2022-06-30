@@ -18,4 +18,10 @@
     <ProjectReference Include="..\Exam_Web.DataLayer\Exam_Web.DataLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\Register\" />
+    <Folder Include="wwwroot\img\Register\" />
+    <Folder Include="wwwroot\font\" />
+  </ItemGroup>
+
 </Project>

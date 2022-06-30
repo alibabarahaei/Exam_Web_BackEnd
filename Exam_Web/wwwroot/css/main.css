@@ -1,0 +1,20 @@
+/* .col{
+    border: 1px solid black;
+} */
+@font-face {
+    font-family: myFont;
+    src: url(../font/Sans\ a4fran3.ttf) ;
+  }
+body
+{
+    font-family:myFont ;
+}
+
+.text_align_center
+{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
