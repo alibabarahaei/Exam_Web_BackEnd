@@ -15,6 +15,11 @@
       "ProjectGuid": "294f49da-bb6b-487c-99c5-cd727f092568",
       "DisplayName": "Exam_Web.CoreLayer",
       "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 3

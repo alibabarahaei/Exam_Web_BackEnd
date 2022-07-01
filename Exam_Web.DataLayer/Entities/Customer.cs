@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Exam_Web.DataLayer.Entities
 {
-    public class Customer
+    public class User
     {
         [Required]
-        public int CustomerID { get; set; }
+        public int UserID { get; set; }
         [Required]
-        public string CustomerName { get; set; }
+        public string Name { get; set; }
         [Required]
-        public string CustomerFamily { get; set; }
+        public string Family { get; set; }
         [Required]
         public string UserName { get; set; }
         [Required]
