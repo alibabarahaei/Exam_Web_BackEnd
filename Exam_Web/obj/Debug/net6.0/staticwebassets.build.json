@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BRIXAA2b5I7xEN5+bDAdS8rLe3QmOX7jSkzlAFmJmCw=",
+  "Hash": "OD+wPBRze1NhOkv/glP20um2PmUfY0/WKA4JJd4r3uc=",
   "Source": "Exam_Web",
   "BasePath": "_content/Exam_Web",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
+      "Identity": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\css\\Register\\Register.css",
+      "SourceId": "Exam_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\",
+      "BasePath": "_content/Exam_Web",
+      "RelativePath": "css/Register/Register.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Register\\Register.css"
+    },
+    {
       "Identity": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\favicon.ico",
       "SourceId": "Exam_Web",
       "SourceType": "Discovered",
@@ -134,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Login\\a.png"
+    },
+    {
+      "Identity": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\img\\Register\\a.png",
+      "SourceId": "Exam_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\",
+      "BasePath": "_content/Exam_Web",
+      "RelativePath": "img/Register/a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Register\\a.png"
     },
     {
       "Identity": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\js\\site.js",

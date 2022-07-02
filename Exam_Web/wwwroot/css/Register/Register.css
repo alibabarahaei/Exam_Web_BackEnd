@@ -1,0 +1,126 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    
+}
+body {
+    background: url(/img/Register/a.png) no-repeat center;
+    background-size: cover;
+}
+
+.row-main-page
+{
+    box-shadow: 0 10px 34px -15px rgb(0 0 0 / 24%);
+}
+
+.row-main-page-left{
+    height: 460px;
+    background-image: linear-gradient(to left bottom, #f6585e, #f75668, #f65572, #f5547c, #f35586);
+}
+.row-main-page-right{
+    height: 460px;
+    background-color: white;
+    padding: 24px;
+}
+
+.input-form-login {
+    border-radius: 50px;
+    border: 1px solid transparent;
+    color: #000;
+    background: rgba(0, 0, 0, .05);
+    width: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    outline: none;
+}
+
+.btn-form-login {
+    background-image: linear-gradient(to left bottom, #f75959, #f85665, #f75570, #f6547c, #f35587);
+    border: none;
+    width: 100%;
+    border-radius: 50px;
+    height: 48px;
+    color: white;
+}
+
+.login-account {
+    border: 1px solid rgba(0,0,0,.05);
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%; 
+    margin-left: 13px;
+    transition: 0.5s;
+
+}
+.login-account:hover
+{
+background-color: #f35587;
+
+}
+.a-forgot-password
+{
+    color: gray;
+    text-decoration: none;
+    background-color: transparent;
+    transition: 0.5s;
+}
+.a-forgot-password:hover{
+    color: #F55774;
+    
+    }
+
+.label-remember-password
+{
+    color: gray;
+}
+
+
+
+.input-form-login:focus
+{
+   
+    border:1px solid #F55774;;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 15px;
+    line-height: 3;
+}
+
+a>i
+{
+    color: gray;
+    transition: 0.5s;
+}
+.login-account:hover>i:hover
+{
+    color: white;
+}
+.login-account:hover
+{
+background-color: #f35587;
+
+}
+.input-check-remember-me
+{
+    transition: 0.5s;
+}
+.input-check-remember-me:not(checked){
+    background-color: white;
+   
+}
+.input-check-remember-me:checked{
+    background-color: #f35586;
+    border: none;
+    box-shadow: none;
+}
+.input-check-remember-me:focus{
+    background-color: #f35586;
+    border: none;
+    box-shadow: none;
+}

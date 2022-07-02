@@ -2,3 +2,68 @@
 @model Exam_Web.Pages.Register.IndexModel
 @{
 }
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="~/css/Register/Register.css">
+
+
+</head>
+
+<body style="background-color: #F8F9FD;" class="align-items-center">
+
+  <div class="container" style="height: 100vh;">
+    <div class="row justify-content-center align-items-center ">
+      <div class="col-md-6 col-lg-5 col-xl-4 row-main-page row-main-page-right">
+        <div class="row text_align_center mb-4">
+          <h3>ثبت نام</h3>
+        </div>
+        <div class="row">
+          <form action="">
+            <div class="mb-2">
+              <img src="img/people.svg" alt="">
+              نام کاربری
+            </div>
+            <div class="row">
+              <div class="col">
+                <input class=" form-control-lg input-form-login mb-3" type="text" placeholder="نام کاربری" ">
+               </div>
+              </div>
+            <div class=" mb-2">
+                <img src="img/lock.svg" alt="">
+                رمز عبور
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input class=" form-control-lg input-form-login mb-4" type="text" placeholder="رمز عبور">
+                </div>
+              </div>
+              <div class="mb-2">
+                <img src="img/envelope.svg" alt="">
+                ایمیل
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input class=" form-control-lg input-form-login mb-3" type="text" placeholder="ایمیل">
+                </div>
+              </div>
+              <button class="btn-form-login mb-3">
+                ثبت نام
+              </button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-5 col-xl-4 text_align_center row-main-page row-main-page-left d-none d-md-block">
+        <p></p>
+      </div>
+    </div>
+
+
+    <script src="Js/main.js"></script>
+</body>
+
+</html>
