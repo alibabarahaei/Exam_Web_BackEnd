@@ -429,6 +429,9 @@
         }
       },
       "Exam_Web.CoreLayer/1.0.0": {
+        "dependencies": {
+          "Exam_Web.DataLayer": "1.0.0"
+        },
         "runtime": {
           "Exam_Web.CoreLayer.dll": {}
         }

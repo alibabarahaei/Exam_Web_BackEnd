@@ -31,7 +31,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj": {
+                "projectPath": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

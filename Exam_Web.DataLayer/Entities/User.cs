@@ -11,10 +11,8 @@ namespace Exam_Web.DataLayer.Entities
     {
         [Required]
         public int UserID { get; set; }
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public string Family { get; set; }
+        public string? Name { get; set; }
+        public string? Family { get; set; }
         [Required]
         public string UserName { get; set; }
         [Required]

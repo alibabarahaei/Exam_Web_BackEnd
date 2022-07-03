@@ -1,3 +1,4 @@
+using Exam_Web.CoreLayer.Services.Users;
 using Exam_Web.DataLayer.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 
+
+
+
+builder.Services.AddScoped<IUserService, UserService>();
 
 
 builder.Services.AddDbContext<ExamContext>(option =>
