@@ -21,10 +21,23 @@ namespace Exam_Web.CoreLayer.Services.Users
             _context=context;
         }
 
+        public UserDto LoginUser(LoginUserDto LoginDto)
+        {
+            var passwordHashed = LoginDto.Password.EncodeToMd5();
+            var user =_context.Users.FirstOrDefault(u=>u.UserName == LoginDto.UserName && u.Password== passwordHashed);
 
-
-
-
+            if (user == null)
+                return null;
+            var userDto = new UserDto()
+            {
+                Name=user.Name,
+                Family=user.Family,
+                Email=user.Email,
+                UserName=user.UserName,
+                Password=user.Password,
+            };
+            return userDto;
+        }
 
         public OperationResult RegisterUser(RegisterUserDto RegisterDto)
         {

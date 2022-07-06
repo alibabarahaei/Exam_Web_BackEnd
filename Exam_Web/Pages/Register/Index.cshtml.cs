@@ -69,7 +69,8 @@ namespace Exam_Web.Pages.Register
                 ModelState.AddModelError("UserName", result.Message);
                 return Page();
             }
-            return RedirectToPage("Login");
-        }
+            return RedirectToPage("../Login/Index");
+        
+         }
     }
 }

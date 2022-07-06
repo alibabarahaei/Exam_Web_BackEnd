@@ -12,7 +12,7 @@ namespace Exam_Web.CoreLayer.Services.Users
     {
 //        OperationResult EditUser(EditUserDto command);
         OperationResult RegisterUser(RegisterUserDto RegisterDto);
-//        UserDto LoginUser(LoginUserDto command);
+        UserDto LoginUser(LoginUserDto LoginDto);
 
 
 

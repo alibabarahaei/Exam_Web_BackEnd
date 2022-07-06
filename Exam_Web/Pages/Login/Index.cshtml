@@ -24,14 +24,14 @@
           <h3>ورود</h3>
         </div>
         <div class="row">
-          <form action="">
+          <form method="post">
             <div class="mb-2">
               <img src="img/people.svg" alt="">
               نام کاربری
             </div>
             <div class="row">
               <div class="col">
-                <input class=" form-control-lg input-form-login mb-3" type="text" placeholder="نام کاربری" ">
+                <input class=" form-control-lg input-form-login mb-3" type="text" placeholder="نام کاربری" asp-for="UserName">
                </div>
               </div>
             <div class=" mb-2">
@@ -40,10 +40,10 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <input class=" form-control-lg input-form-login mb-4" type="text" placeholder="رمز عبور">
+                  <input class=" form-control-lg input-form-login mb-4" type="text" placeholder="رمز عبور" asp-for="Password">
                 </div>
               </div>
-              <button class="btn-form-login mb-3">
+              <button class="btn-form-login mb-3" type="submit">
                 ورود
               </button>
               <div class="row justify-content-between">
