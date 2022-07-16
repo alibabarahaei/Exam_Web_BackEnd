@@ -1,11 +1,20 @@
+using Exam_Web.Config;
+using Exam_Web.Config.Extensions;
 using Exam_Web.CoreLayer.Services.Users;
 using Exam_Web.DataLayer.Context;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+
+var appSettings = new AppSettings();
+appSettings.Secret = "reds";
+
+builder.Services.AddOurAuthentication(appSettings);
 
 
 
@@ -39,7 +48,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();

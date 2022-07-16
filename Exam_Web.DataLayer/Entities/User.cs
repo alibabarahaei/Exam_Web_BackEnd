@@ -11,14 +11,20 @@ namespace Exam_Web.DataLayer.Entities
     {
         [Required]
         public int UserID { get; set; }
-        public string? Name { get; set; }
-        public string? Family { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
         [Required]
         public string UserName { get; set; }
         [Required]
         public string Password { get; set; }
         [Required]
         public string Email { get; set; }
-
+        public UserRole? Role { get; set; }
+    }
+    public enum UserRole
+    {
+        Admin,
+        User,
+        Writer
     }
 }

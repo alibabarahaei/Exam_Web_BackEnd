@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj": {}
+    "C:\\Users\\user\\Desktop\\New folder (11)\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj": {
+    "C:\\Users\\user\\Desktop\\New folder (11)\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\New folder (11)\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj",
         "projectName": "Exam_Web.DataLayer",
-        "projectPath": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\New folder (11)\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\Exam_Web.DataLayer.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\New folder (11)\\Exam_Web_BackEnd\\Exam_Web.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

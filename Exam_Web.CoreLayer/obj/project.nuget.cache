@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ipHoJW71aPITivwHsuA82y6J43vzV15hFBPlphvsC+oR243ys3JtX2Zow5b/q1x+ri0RSmWYmTCTAHNYeJH9Og==",
+  "dgSpecHash": "fFA883qMkjAOG552YJg6Vl6CFpIX7DcHgNRyFpPAywrwEV3zGkA7q547SVB+hCHjf9YH1V10za/5+oKLDX3IYg==",
   "success": true,
-  "projectFilePath": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web.CoreLayer\\Exam_Web.CoreLayer.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\New folder (11)\\Exam_Web_BackEnd\\Exam_Web.CoreLayer\\Exam_Web.CoreLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

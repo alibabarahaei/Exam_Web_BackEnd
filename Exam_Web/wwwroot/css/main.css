@@ -1,20 +1,59 @@
+:root {
+    --pink-lighter: #F895B4;
+    --pink-light: #f35586;
+    --pink-middle: #F65572;
+    --pink-dark: #f6585e;
+    --pink-darker: #EF1558;
+    --white-lighter: #FFFF;
+    --gray-lighter: #FFFBFA;
+    --gray-light: rgba(0, 0, 0, .05);
+    --gray-middle: gray;
+    --black-middle: #212529;
+    --black-dark: #1D2024;
+    --black-darker: black;
+}
+
+
+
 /* .col{
     border: 1px solid black;
 } */
 @font-face {
-    font-family: myFont;
-    src: url(../font/Sans\ a4fran3.ttf) ;
-  }
-body
-{
-    font-family:myFont ;
+    font-family: Sans;
+    src: url(../font/Sans\ a4fran3.ttf);
 }
 
-.text_align_center
-{
+@font-face {
+    font-family: IRANSansWeb;
+    src: url(../font/IRANSansWeb\(FaNum\)_Bold.woff2);
+}
+
+body {
+    font-family: Sans;
+}
+
+.text_align_center {
     text-align: center;
 }
-a{
+
+a {
     text-decoration: none;
+    color: var(--pink-middle);
 }
 
+.pink-light {
+    color: var(--pink-light);
+}
+
+.pink-middle {
+    color: var(--pink-middle);
+}
+
+.pink-dark {
+    color: var(--pink-dark);
+}
+
+.btn-pink {
+    background-color: var(--pink-middle);
+    color: var(--white-lighter);
+}

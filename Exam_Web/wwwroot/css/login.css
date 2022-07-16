@@ -1,0 +1,130 @@
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+
+
+
+.main-backgroung {
+    background: url(../img/background_login.png) no-repeat center;
+    background-size: cover;
+}
+
+
+
+.row-main-page {
+    box-shadow: 0 10px 34px -15px rgb(0 0 0 / 24%);
+}
+
+.row-main-page-left {
+    height: 460px;
+    background-image: linear-gradient(to left bottom, var(--pink-dark), var(--pink-middle), var(--pink-light));
+}
+
+.row-main-page-right {
+    height: 460px;
+    background-color: var(--white-lighter);
+    padding: 24px;
+}
+
+.input-form-login {
+    border-radius: 50px;
+    border: 1px solid transparent;
+    color: var(--black-darker);
+    background: var(--gray-light);
+    width: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    outline: none;
+}
+
+.btn-form-login {
+    background-image: linear-gradient(to left bottom, var(--pink-dark), var(--pink-middle), var(--pink-light));
+    border: none;
+    width: 100%;
+    border-radius: 50px;
+    height: 48px;
+    color: var(--white-lighter);
+}
+
+.login-account {
+    border: 1px solid var(--gray-light);
+    background-color: var();
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-left: 13px;
+    transition: 0.5s;
+}
+
+    .login-account:hover {
+        background-color: var(--pink-light);
+    }
+
+.a-forgot-password {
+    color: var(--gray-middle);
+    text-decoration: none;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+    .a-forgot-password:hover {
+        color: var(--pink-middle);
+    }
+
+.label-remember-password {
+    color: var(--gray-middle);
+}
+
+
+
+.input-form-login:focus {
+    border: 1px solid var(--pink-middle);
+}
+
+input::-webkit-input-placeholder {
+    font-size: 15px;
+    line-height: 3;
+}
+
+a > i {
+    color: var(--gray-middle);
+    transition: 0.5s;
+}
+
+.login-account:hover > i:hover {
+    color: var(--white-lighter);
+}
+
+.login-account:hover {
+    background-color: var(--pink-light);
+}
+
+.input-check-remember-me {
+    transition: 0.5s;
+}
+
+    .input-check-remember-me:not(checked) {
+        background-color: var(--white-lighter);
+    }
+
+    .input-check-remember-me:checked {
+        background-color: var(--pink-light);
+        border: none;
+        box-shadow: none;
+    }
+
+    .input-check-remember-me:focus {
+        background-color: var(--pink-light);
+        border: none;
+        box-shadow: none;
+    }

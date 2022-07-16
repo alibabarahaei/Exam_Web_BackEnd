@@ -30,11 +30,12 @@ namespace Exam_Web.CoreLayer.Services.Users
                 return null;
             var userDto = new UserDto()
             {
-                Name=user.Name,
-                Family=user.Family,
+                FirstName=user.FirstName,
+                LastName=user.LastName,
                 Email=user.Email,
                 UserName=user.UserName,
                 Password=user.Password,
+                Role=user.Role,
             };
             return userDto;
         }

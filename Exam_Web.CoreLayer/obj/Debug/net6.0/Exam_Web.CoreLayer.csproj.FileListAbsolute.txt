@@ -13,3 +13,18 @@ C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.Co
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.DataLayer.dll
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.DataLayer.pdb
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.csproj.CopyComplete
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.CoreLayer.deps.json
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.CoreLayer.dll
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\ref\Exam_Web.CoreLayer.dll
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.CoreLayer.pdb
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.DataLayer.dll
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.DataLayer.pdb
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.AssemblyInfo.cs
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.csproj.CopyComplete
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.dll
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\ref\Exam_Web.CoreLayer.dll
+C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.pdb

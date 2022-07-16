@@ -19,10 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\Login\" />
-    <Folder Include="wwwroot\css\Register\" />
-    <Folder Include="wwwroot\img\Login\" />
     <Folder Include="wwwroot\font\" />
+    <Folder Include="wwwroot\img\Register\" />
   </ItemGroup>
 
 </Project>
