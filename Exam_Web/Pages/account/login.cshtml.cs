@@ -74,7 +74,7 @@ namespace Exam_Web.Pages.account
             };
             HttpContext.SignInAsync(claimPrincipal, properties);
             
-
+            
 
 
             return RedirectToPage("../Index");

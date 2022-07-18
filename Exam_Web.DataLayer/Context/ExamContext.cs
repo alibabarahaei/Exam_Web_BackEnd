@@ -14,9 +14,9 @@ namespace Exam_Web.DataLayer.Context
         {
 
         }
-
         public DbSet<User> Users { get; set; }
 
+        public DbSet<TestQuestion> TestQuestions { get; set; }
 
 
 
