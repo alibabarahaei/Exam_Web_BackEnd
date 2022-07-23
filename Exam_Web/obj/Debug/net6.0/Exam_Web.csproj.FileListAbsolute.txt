@@ -180,3 +180,10 @@ C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web\obj\Debug\net6.0
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web\obj\Debug\net6.0\ref\Exam_Web.dll
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web\obj\Debug\net6.0\Exam_Web.pdb
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web\obj\Debug\net6.0\Exam_Web.genruntimeconfig.cache
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\AutoMapper.dll
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

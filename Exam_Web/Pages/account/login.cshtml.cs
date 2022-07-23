@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing.Printing;
 using System.Security.Claims;
 
 namespace Exam_Web.Pages.account
@@ -31,61 +32,58 @@ namespace Exam_Web.Pages.account
         [MinLength(6, ErrorMessage = "{0} باید بیشتر از 5 کاراکتر باشد")]
         public string Password { get; set; }
 
-
+        [Display(Name = "یادآوری کلمه عبور")]
+        public bool RememberMe { get; set; }
 
         public void OnGet()
         {
+         
+            var x=_userService.IsSignedIn(User);
+            var c = User;
+            if (x == null)
+            {
+                var zx = User;
+            }
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost()
         {
-            if (ModelState.IsValid == false)
+            if (_userService.IsSignedIn(User))
+                return RedirectToAction("Index", "Home");
+
+            if (ModelState.IsValid)
             {
-                return Page();
+                var result =await _userService.LoginUser(new LoginUserDto()
+                {
+                    UserName = UserName,
+                    Password = Password,
+                    RememberMe = RememberMe
+                });
+
+                if (result.Succeeded)
+                {
+                   
+
+                    return RedirectToAction("Index", "Home");
+                }
+
+                if (result.IsLockedOut)
+                {
+                    
+                }
+
+                
+
+                return RedirectToPage("../Index");
+
             }
-
-            var user = _userService.LoginUser(new LoginUserDto()
-            {
-                UserName = UserName,
-                Password = Password
-            });
-
-
-            if (user == null)
-            {
-                //               ModelState.AddModelError("UserName", "کاربری با مشخصات وارد شده یافت نشد");
-                return Page();
-            }
-
-            
-            List<Claim> claims = new List<Claim>()
-            {
-               new Claim(ClaimTypes.NameIdentifier,user.UserId.ToString()),
-               new Claim(ClaimTypes.Email,user.Email),
-            };
-
-            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var claimPrincipal = new ClaimsPrincipal(identity);
-            var properties = new AuthenticationProperties()
-            {
-                AllowRefresh=true,
-                IsPersistent = true,
-                ExpiresUtc= GetExpireDateTime(true)
-            };
-            HttpContext.SignInAsync(claimPrincipal, properties);
-            
-            
-
-
             return RedirectToPage("../Index");
-
         }
-
 
         private DateTime GetExpireDateTime(bool isRememberMe)
-        {
-            return isRememberMe ? DateTime.UtcNow.AddDays(30) : DateTime.UtcNow.AddDays(1);
-        }
+            {
+                return isRememberMe ? DateTime.UtcNow.AddDays(30) : DateTime.UtcNow.AddDays(1);
+            }
 
 
     }

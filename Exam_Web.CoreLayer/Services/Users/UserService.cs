@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace Exam_Web.CoreLayer.Services.Users
 {
@@ -14,13 +16,107 @@ namespace Exam_Web.CoreLayer.Services.Users
     {
 
         private readonly ExamContext _context;
+        private readonly UserManager<UserIdentity> _userManager;
+        private readonly SignInManager<UserIdentity> _signInManager;
 
-
-        public UserService(ExamContext context)
+        public UserService(ExamContext context, UserManager<UserIdentity> userManager,SignInManager<UserIdentity> signInManager)
         {
-            _context=context;
+            _context = context;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
+        public bool IsSignedIn(ClaimsPrincipal user)
+        {
+            
+            return _signInManager.IsSignedIn(user);
+        }
+
+        public async Task<SignInResult> LoginUser(LoginUserDto LoginDto)
+        {
+            var result =
+                await _signInManager.PasswordSignInAsync(LoginDto.UserName, LoginDto.Password, LoginDto.RememberMe,
+                    true);
+            return result;
+        }
+
+
+        public async Task<IdentityResult> RegisterUser(RegisterUserDto RegisterDto)
+        {
+
+            var user = new UserIdentity()
+            {
+                UserName = RegisterDto.UserName,
+                Email = RegisterDto.Email
+            };
+
+            var result = await _userManager.CreateAsync(user, RegisterDto.Password);
+            return result;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    public UserDto LoginUser(LoginUserDto LoginDto)
+    {
+        
+    }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
         public UserDto LoginUser(LoginUserDto LoginDto)
         {
             var passwordHashed = LoginDto.Password.EncodeToMd5();
@@ -55,5 +151,7 @@ namespace Exam_Web.CoreLayer.Services.Users
             _context.SaveChanges();
             return OperationResult.Success();
         }
+
+        */
     }
-}
+

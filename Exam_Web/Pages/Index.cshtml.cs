@@ -7,7 +7,7 @@ namespace Exam_Web.Pages
 
 
 
-    [Authorize]
+    
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
@@ -19,7 +19,7 @@ namespace Exam_Web.Pages
 
         public void OnGet()
         {
-
+          
         }
     }
 }

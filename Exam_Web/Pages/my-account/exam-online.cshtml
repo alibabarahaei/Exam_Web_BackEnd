@@ -1,0 +1,108 @@
+﻿@page
+
+@model Exam_Web.Pages.my_account.exam_onlineModel
+
+@section MetaTags
+{
+   
+}
+
+@section Links
+{
+    <link rel="stylesheet" href="~/css/question.css">
+}
+
+
+
+    <div class="background_exam" >
+        <div class="container" >
+            <div class="row text-center align-items-center"
+                style="height:85px ; background-color: var(--magenta-middle); border-start-start-radius:10px ;">
+
+                <div class="col">
+                    آزمون مطالعات اجتماعی
+                </div>
+
+            </div>
+
+            <div class="row background_question p-5">
+
+                
+                @{foreach (var Question in @Model.QuestionList)
+                    {
+                        <div class="row mb-4">
+                            <div class="col ">
+                                <div class="row mb-2">
+                                    <div class="col"><span>1_</span>@Question.Question</div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label text-break" for="flexCheckDefault">
+                                                @Question.Gozine1
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                                   checked>
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                @Question.Gozine2
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                                   checked>
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                @Question.Gozine3
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                                   checked>
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                @Question.Gozine4
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+
+
+label{
+    word-break: break-all;
+}
+
+
+
+.background_exam
+{
+    
+    background: url(../img/background_question.svg) no-repeat  center;
+    background-size: cover; 
+}
+
+.container
+{
+    padding-top: 130px;
+    padding-bottom: 50px;
+    
+}
+
+.background_question
+{
+    border-end-end-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+

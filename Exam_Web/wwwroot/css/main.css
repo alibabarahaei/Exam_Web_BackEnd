@@ -1,16 +1,21 @@
 :root {
+    /* color */
     --pink-lighter: #F895B4;
     --pink-light: #f35586;
     --pink-middle: #F65572;
     --pink-dark: #f6585e;
     --pink-darker: #EF1558;
+    --magenta-middle: #CE5776;
     --white-lighter: #FFFF;
+    --white-lighter-blur: rgba(255, 255, 255,0.4);
     --gray-lighter: #FFFBFA;
     --gray-light: rgba(0, 0, 0, .05);
     --gray-middle: gray;
     --black-middle: #212529;
     --black-dark: #1D2024;
     --black-darker: black;
+    /* color */
+    /* Showdow */
 }
 
 
@@ -56,4 +61,22 @@ a {
 .btn-pink {
     background-color: var(--pink-middle);
     color: var(--white-lighter);
+}
+
+
+input[type="checkbox"]:not(checked) {
+    background-color: var(--white-lighter);
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--pink-light);
+    border: none;
+    box-shadow: none;
+}
+
+
+input[type="checkbox"]:focus {
+    background-color: var(--pink-light);
+    border: none;
+    box-shadow: none;
 }

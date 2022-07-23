@@ -18,7 +18,7 @@ namespace Exam_Web.DataLayer.Entities
 
         public string Title { get; set; }
 
-        public string SubTitle { get; set; }
+        public string? SubTitle { get; set; }
 
         public string Question { get; set; }
 
@@ -28,7 +28,12 @@ namespace Exam_Web.DataLayer.Entities
         public string? Gozine4 { get; set;}
 
 
+        #region Relation
 
+        public ICollection<Azmoon> Azmoons { get; set; }
+        public ICollection<User_Azmoon_Test_Answer> TestId { get; set; }
+
+        #endregion
 
 
     }

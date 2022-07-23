@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r83XmT/ffdXLu+wAWZC/uwkkI0nDjUrNsNPxjl/YMBM=",
+  "Hash": "tFkHEjrL+eIJuigXlTuskou9uDL6Ho3/BV/HAhlG2bY=",
   "Source": "Exam_Web",
   "BasePath": "_content/Exam_Web",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
+      "Identity": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\css\\question.css",
+      "SourceId": "Exam_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\",
+      "BasePath": "_content/Exam_Web",
+      "RelativePath": "css/question.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\question.css"
+    },
+    {
       "Identity": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\css\\register.css",
       "SourceId": "Exam_Web",
       "SourceType": "Discovered",
@@ -151,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\background_login.png"
+    },
+    {
+      "Identity": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\img\\background_question.svg",
+      "SourceId": "Exam_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\",
+      "BasePath": "_content/Exam_Web",
+      "RelativePath": "img/background_question.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\background_question.svg"
     },
     {
       "Identity": "C:\\Amir\\Project\\Exam_Web_BackEnd\\Exam_Web\\wwwroot\\img\\background_register.png",

@@ -1,8 +1,12 @@
 using Exam_Web.Config;
 using Exam_Web.Config.Extensions;
+using Exam_Web.CoreLayer.Services.Exam;
 using Exam_Web.CoreLayer.Services.Users;
 using Exam_Web.DataLayer.Context;
+using Exam_Web.DataLayer.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using PersianTranslation.Identity;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,17 +23,25 @@ builder.Services.AddOurAuthentication(appSettings);
 
 
 
+builder.Services.AddIdentity<UserIdentity, IdentityRole>(options =>
+    {
+        
+        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+    })
+    .AddEntityFrameworkStores<ExamContext>()
+    .AddDefaultTokenProviders()
+    .AddErrorDescriber<PersianIdentityErrorDescriber>();
+
+
 
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IExamService, ExamService>();
 
 
 builder.Services.AddDbContext<ExamContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
-
-
-
 
 
 

@@ -50,23 +50,27 @@ namespace Exam_Web.Pages.account
 
 
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost()
         {
+
+            var x = User;
             if (ModelState.IsValid == false)
             {
                 return Page();
             }
-            var result = _userService.RegisterUser(new RegisterUserDto()
+            var result = await _userService.RegisterUser(new RegisterUserDto()
             {
                 UserName = UserName,
                 Password = Password,
                 Email = Email
             });
-            if (result.Status == OperationResultStatus.Error)
+            /*
+            if (!result.Result.Succeeded)
             {
-                ModelState.AddModelError("UserName", result.Message);
+                ModelState.AddModelError("UserName", "h");
                 return Page();
             }
+            */
             return RedirectToPage("../Login/Index");
 
         }
