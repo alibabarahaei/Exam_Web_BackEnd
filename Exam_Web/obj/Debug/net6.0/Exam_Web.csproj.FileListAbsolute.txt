@@ -187,3 +187,4 @@ C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.Extensions.
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\AutoMapper.dll
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\libman.json

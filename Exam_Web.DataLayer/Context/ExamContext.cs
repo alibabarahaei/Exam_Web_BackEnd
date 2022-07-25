@@ -1,11 +1,6 @@
 ﻿using Exam_Web.DataLayer.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exam_Web.DataLayer.Context
 {
@@ -14,9 +9,9 @@ namespace Exam_Web.DataLayer.Context
     {
         public ExamContext(DbContextOptions<ExamContext> options) : base(options)
         {
-           
+
         }
-        
+
 
         public DbSet<TestQuestion> TestQuestions { get; set; }
         public DbSet<Azmoon> Azmoons { get; set; }
@@ -27,7 +22,8 @@ namespace Exam_Web.DataLayer.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User_Azmoon_Test_Answer>().HasKey(table => new {
+            modelBuilder.Entity<User_Azmoon_Test_Answer>().HasKey(table => new
+            {
                 table.AzmoonId,
                 table.TestQuestionId,
                 table.UserIdentityId

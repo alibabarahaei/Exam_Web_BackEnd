@@ -1,12 +1,8 @@
 ﻿using Exam_Web.CoreLayer.DTOs.Users;
 using Exam_Web.CoreLayer.Services.Users;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using System.Drawing.Printing;
-using System.Security.Claims;
 
 namespace Exam_Web.Pages.account
 {
@@ -25,11 +21,12 @@ namespace Exam_Web.Pages.account
 
         [Display(Name = "نام کاربری")]
         [Required(ErrorMessage = "{0} را وارد کنید")]
+        [StringLength(30, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 6)]
         public string UserName { get; set; }
 
         [Display(Name = "کلمه عبور")]
         [Required(ErrorMessage = "{0} را وارد کنید")]
-        [MinLength(6, ErrorMessage = "{0} باید بیشتر از 5 کاراکتر باشد")]
+        [StringLength(30, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 8)]
         public string Password { get; set; }
 
         [Display(Name = "یادآوری کلمه عبور")]
@@ -37,53 +34,56 @@ namespace Exam_Web.Pages.account
 
         public void OnGet()
         {
-         
-            var x=_userService.IsSignedIn(User);
-            var c = User;
-            if (x == null)
-            {
-                var zx = User;
-            }
         }
 
         public async Task<IActionResult> OnPost()
         {
-            if (_userService.IsSignedIn(User))
-                return RedirectToAction("Index", "Home");
+            
+                
 
             if (ModelState.IsValid)
             {
-                var result =await _userService.LoginUser(new LoginUserDto()
+                var result = await _userService.LoginUser(new LoginUserDto()
                 {
                     UserName = UserName,
                     Password = Password,
                     RememberMe = RememberMe
                 });
 
-                if (result.Succeeded)
+                if (!result.Succeeded)
                 {
+                    if (result.IsLockedOut)
+                    {
+                        ModelState.AddModelError("UserName", "اکانت شما تا اطلاع ثانوی قفل شده است");
+                        return Page();
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("UserName", "نام کاربری یا رمز عبور اشتباه هست");
+                        return Page();
+                    }
                    
-
-                    return RedirectToAction("Index", "Home");
                 }
-
-                if (result.IsLockedOut)
+                else
                 {
-                    
+                    return RedirectToPage("../Index");
                 }
 
                 
 
-                return RedirectToPage("../Index");
+
+
+               
 
             }
+
             return RedirectToPage("../Index");
         }
 
         private DateTime GetExpireDateTime(bool isRememberMe)
-            {
-                return isRememberMe ? DateTime.UtcNow.AddDays(30) : DateTime.UtcNow.AddDays(1);
-            }
+        {
+            return isRememberMe ? DateTime.UtcNow.AddDays(30) : DateTime.UtcNow.AddDays(1);
+        }
 
 
     }

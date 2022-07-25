@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 
 namespace Exam_Web.CoreLayer.AutoMapperProfile
 {
-    public class CustomProfile:Profile
+    public class CustomProfile : Profile
     {
 
-        
+
     }
 }

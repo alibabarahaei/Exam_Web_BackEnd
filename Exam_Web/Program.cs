@@ -25,8 +25,9 @@ builder.Services.AddOurAuthentication(appSettings);
 
 builder.Services.AddIdentity<UserIdentity, IdentityRole>(options =>
     {
-        
+        options.Password.RequireNonAlphanumeric = false;
         options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+        
     })
     .AddEntityFrameworkStores<ExamContext>()
     .AddDefaultTokenProviders()

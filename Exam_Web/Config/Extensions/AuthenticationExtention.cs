@@ -9,7 +9,7 @@ namespace Exam_Web.Config.Extensions
         public static IServiceCollection AddOurAuthentication(this IServiceCollection services,
             AppSettings appSettings)
         {
-            
+
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
             services.AddAuthentication(options =>
             {

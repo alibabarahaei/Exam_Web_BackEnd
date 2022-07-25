@@ -28,18 +28,20 @@
               <img src="img/people.svg" alt="">
               نام کاربری
             </div>
-            <div class="row">
+            <div class="row"  style="height: 72px">
               <div class="col">
-                <input class=" form-control-lg input-form-login mb-3" type="text" placeholder="نام کاربری" asp-for="UserName">
+                  <input class=" form-control-lg input-form-login " type="text" placeholder="نام کاربری" asp-for="UserName">
+                  <span class="text-danger " asp-validation-for="UserName"  style="font-size: 13px"></span>
                </div>
               </div>
             <div class=" mb-2">
                 <img src="img/lock.svg" alt="">
                 رمز عبور
               </div>
-              <div class="row">
+              <div class="row"  style="height: 72px">
                 <div class="col">
-                  <input class=" form-control-lg input-form-login mb-4" type="text" placeholder="رمز عبور" asp-for="Password">
+                    <input class=" form-control-lg input-form-login " type="text" placeholder="رمز عبور" asp-for="Password">
+                    <span class="text-danger " asp-validation-for="Password"  style="font-size: 13px"></span>
                 </div>
               </div>
               <button class="btn-form-login mb-3" type="submit">

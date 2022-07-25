@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exam_Web.DataLayer.Entities
+﻿namespace Exam_Web.DataLayer.Entities
 {
     public class Azmoon
     {
 
 
 
-        
+
         public long AzmoonId { get; set; }
 
 
@@ -31,7 +24,7 @@ namespace Exam_Web.DataLayer.Entities
 
         public ICollection<TestQuestion> TestQuestions { get; set; }
 
-        
+
         public ICollection<User_Azmoon_Test_Answer> Azmoonid { get; set; }
 
         #endregion

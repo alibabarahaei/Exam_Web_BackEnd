@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exam_Web.DataLayer.Entities
+﻿namespace Exam_Web.DataLayer.Entities
 {
     public class TestQuestion
     {
@@ -23,9 +17,9 @@ namespace Exam_Web.DataLayer.Entities
         public string Question { get; set; }
 
         public string? Gozine1 { get; set; }
-        public string? Gozine2 { get; set;}
+        public string? Gozine2 { get; set; }
         public string? Gozine3 { get; set; }
-        public string? Gozine4 { get; set;}
+        public string? Gozine4 { get; set; }
 
 
         #region Relation

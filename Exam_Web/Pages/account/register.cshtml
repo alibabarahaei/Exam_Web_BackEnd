@@ -23,51 +23,67 @@
 
 
    <div class="main-backgroung" style="background-color: #F8F9FD;" class="align-items-center">
-  <div class="container" style="height: 100vh;">
-    <div class="row justify-content-center align-items-center ">
-      <div class="col-md-6 col-lg-5 col-xl-4 row-main-page row-main-page-right">
-        <div class="row text_align_center mb-4">
-          <h3>ثبت نام</h3>
-        </div>
-        <div class="row">
-          <form method="Post">
-            <div class="mb-2">
-              <img src="img/people.svg" alt="">
-              نام کاربری
-            </div>
-            <div class="row">
-              <div class="col">
-                <input  class=" form-control-lg input-form-login mb-3" type="text" placeholder="نام کاربری" asp-for="UserName" >
+  
+   <div class="container" style="height: 100vh;">
+       <div class="row justify-content-center align-items-center ">
+           <div class="col-md-6 col-lg-5 col-xl-4 row-main-page row-main-page-right">
+               <div class="row text_align_center mb-4">
+                   <h3>ثبت نام</h3>
                </div>
-              </div>
-            <div class=" mb-2">
-                <img src="img/lock.svg" alt="">
-                رمز عبور
-              </div>
-              <div class="row">
-                <div class="col">
-                  <input class=" form-control-lg input-form-login mb-4" type="text" placeholder="رمز عبور" asp-for="Password">
-                </div>
-              </div>
-              <div class="mb-2">
-                <img src="img/envelope.svg" alt="">
-                ایمیل
-              </div>
-              <div class="row">
-                <div class="col">
-                  <input class=" form-control-lg input-form-login mb-3" type="text" placeholder="ایمیل" asp-for="Email">
-                </div>
-              </div>
-              <button class="btn-form-login mb-3" type="submit">
-                ثبت نام
-              </button>
-          </form>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-5 col-xl-4 text_align_center row-main-page row-main-page-left d-none d-md-block">
-        <p></p>
-      </div>
-    </div>
+               <div class="row">
+                   <form method="Post">
+                       <div class="mb-2">
+                           <img class="username-icon" alt="">
+                           نام کاربری
+                       </div>
+                       <div class="row " style="height: 72px">
+                           <div class="col">
+                               <input class=" form-control-lg input-form-login " type="text" placeholder="نام کاربری"  asp-for="UserName">
+                               <div class=" text-center">
+                                   <span class="text-danger " asp-validation-for="UserName"  style="font-size: 13px"></span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class=" mb-2">
+                           <img class="password-icon" alt="">
+                           رمز عبور
+                       </div>
+                       <div class="row "style="height: 72px">
+                           <div class="col">
+                               <input class=" form-control-lg input-form-login" type="text" placeholder="رمز عبور" asp-for="Password">
+                               <div class=" text-center">
+                                   <span class="text-danger " asp-validation-for="Password"  style="font-size: 13px"></span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="mb-2">
+                           <img class="email-icon" alt="">
+                           ایمیل
+                       </div>
+                       <div class="row "style="height: 72px">
+                           <div class="col">
+                               <input class=" form-control-lg input-form-login " type="text" placeholder="ایمیل" asp-for="Email">
+                               <div class=" text-center">
+                                   <span class="text-danger " asp-validation-for="Email"  style="font-size: 13px"></span>
+                               </div>
+                           </div>
+                       </div>
+                       <button class="btn-form-login mb-2 mt-3">
+                           ثبت نام
+                       </button>
+                       <div class="row justify-content-center login-accounts mt-2">
+               
+                           <a href="#" class="d-flex align-items-center justify-content-center login-account"><i class="fa-brands fa-google"></i></a>
+               
+                       </div>
+                   </form>
+               </div>
+           </div>
+           <div class="col-md-6 col-lg-5 col-xl-4 text_align_center row-main-page row-main-page-left d-none d-md-block">
+               <p></p>
+           </div>
+       </div>
+
     </div>
 
 

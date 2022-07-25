@@ -23,12 +23,12 @@
 }
 
 .row-main-page-left {
-    height: 460px;
+    height: 530px;
     background-image: linear-gradient(to left bottom, var(--pink-dark), var(--pink-middle), var(--pink-light));
 }
 
 .row-main-page-right {
-    height: 460px;
+    height: 530px;
     background-color: var(--white-lighter);
     padding: 24px;
 }
@@ -125,3 +125,15 @@ a > i {
         border: none;
         box-shadow: none;
     }
+
+.username-icon {
+    content: url(../img/people.svg);
+}
+
+.password-icon {
+    content: url(../img/lock.svg);
+}
+
+.email-icon {
+    content: url(../img/envelope.svg);
+}

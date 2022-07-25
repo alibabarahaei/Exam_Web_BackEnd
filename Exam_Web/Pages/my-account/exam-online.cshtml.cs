@@ -1,6 +1,5 @@
 using Exam_Web.CoreLayer.Services.Exam;
 using Exam_Web.DataLayer.Entities;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Exam_Web.Pages.my_account
@@ -11,7 +10,7 @@ namespace Exam_Web.Pages.my_account
         private readonly IExamService _examService;
 
 
-        public List<TestQuestion> QuestionList; 
+        public List<TestQuestion> QuestionList;
 
 
 
@@ -22,7 +21,7 @@ namespace Exam_Web.Pages.my_account
 
         public void OnGet()
         {
-           // QuestionList=_examService.GetQuestionsByAzmoon(1);
+            // QuestionList=_examService.GetQuestionsByAzmoon(1);
         }
     }
 }
