@@ -7,7 +7,7 @@
 
 
 
-        public int TestQuestionId { get; set; }
+        public long TestQuestionId { get; set; }
 
 
         public string Title { get; set; }

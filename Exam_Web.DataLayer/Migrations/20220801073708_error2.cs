@@ -1,13 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Exam_Web.DataLayer.Migrations
 {
-    public partial class ChangeDbContextToIdentityDbContext : Migration
+    public partial class error2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Users");
+
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -45,6 +49,42 @@ namespace Exam_Web.DataLayer.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Azmoons",
+                columns: table => new
+                {
+                    AzmoonId = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SubTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StartTime = table.Column<TimeSpan>(type: "time", nullable: true),
+                    EndTime = table.Column<TimeSpan>(type: "time", nullable: true),
+                    UsedTime = table.Column<long>(type: "bigint", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Azmoons", x => x.AzmoonId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TestQuestions",
+                columns: table => new
+                {
+                    TestQuestionId = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SubTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Question = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gozine1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Gozine2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Gozine3 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Gozine4 = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TestQuestions", x => x.TestQuestionId);
                 });
 
             migrationBuilder.CreateTable(
@@ -153,6 +193,61 @@ namespace Exam_Web.DataLayer.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "AzmoonTestQuestion",
+                columns: table => new
+                {
+                    AzmoonsAzmoonId = table.Column<long>(type: "bigint", nullable: false),
+                    TestQuestionsTestQuestionId = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AzmoonTestQuestion", x => new { x.AzmoonsAzmoonId, x.TestQuestionsTestQuestionId });
+                    table.ForeignKey(
+                        name: "FK_AzmoonTestQuestion_Azmoons_AzmoonsAzmoonId",
+                        column: x => x.AzmoonsAzmoonId,
+                        principalTable: "Azmoons",
+                        principalColumn: "AzmoonId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_AzmoonTestQuestion_TestQuestions_TestQuestionsTestQuestionId",
+                        column: x => x.TestQuestionsTestQuestionId,
+                        principalTable: "TestQuestions",
+                        principalColumn: "TestQuestionId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "User_Azmoon_Test_Answer",
+                columns: table => new
+                {
+                    AzmoonId = table.Column<long>(type: "bigint", nullable: false),
+                    TestQuestionId = table.Column<long>(type: "bigint", nullable: false),
+                    UserIdentityId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_User_Azmoon_Test_Answer", x => new { x.AzmoonId, x.TestQuestionId, x.UserIdentityId });
+                    table.ForeignKey(
+                        name: "FK_User_Azmoon_Test_Answer_AspNetUsers_UserIdentityId",
+                        column: x => x.UserIdentityId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_User_Azmoon_Test_Answer_Azmoons_AzmoonId",
+                        column: x => x.AzmoonId,
+                        principalTable: "Azmoons",
+                        principalColumn: "AzmoonId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_User_Azmoon_Test_Answer_TestQuestions_TestQuestionId",
+                        column: x => x.TestQuestionId,
+                        principalTable: "TestQuestions",
+                        principalColumn: "TestQuestionId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -191,6 +286,21 @@ namespace Exam_Web.DataLayer.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AzmoonTestQuestion_TestQuestionsTestQuestionId",
+                table: "AzmoonTestQuestion",
+                column: "TestQuestionsTestQuestionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_Azmoon_Test_Answer_TestQuestionId",
+                table: "User_Azmoon_Test_Answer",
+                column: "TestQuestionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_Azmoon_Test_Answer_UserIdentityId",
+                table: "User_Azmoon_Test_Answer",
+                column: "UserIdentityId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -211,10 +321,40 @@ namespace Exam_Web.DataLayer.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "AzmoonTestQuestion");
+
+            migrationBuilder.DropTable(
+                name: "User_Azmoon_Test_Answer");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Azmoons");
+
+            migrationBuilder.DropTable(
+                name: "TestQuestions");
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    UserID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<int>(type: "int", nullable: true),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.UserID);
+                });
         }
     }
 }

@@ -34,6 +34,8 @@ namespace Exam_Web.Pages.account
 
         public void OnGet()
         {
+           
+            var x = User;
         }
 
         public async Task<IActionResult> OnPost()
@@ -69,13 +71,12 @@ namespace Exam_Web.Pages.account
                     return RedirectToPage("../Index");
                 }
 
-                
-
-
-
-               
-
             }
+            else
+            {
+                return Page();
+            }
+
 
             return RedirectToPage("../Index");
         }

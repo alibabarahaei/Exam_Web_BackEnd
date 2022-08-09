@@ -4,9 +4,10 @@
     {
         public long AzmoonId { get; set; }
 
-        public int TestQuestionId { get; set; }
+        public long TestQuestionId { get; set; }
 
         public string UserIdentityId { get; set; }
 
+        public int Answer { get; set; }
     }
 }

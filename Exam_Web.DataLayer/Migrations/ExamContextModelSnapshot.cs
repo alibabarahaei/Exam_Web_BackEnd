@@ -27,8 +27,8 @@ namespace Exam_Web.DataLayer.Migrations
                     b.Property<long>("AzmoonsAzmoonId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("TestQuestionsTestQuestionId")
-                        .HasColumnType("int");
+                    b.Property<long>("TestQuestionsTestQuestionId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("AzmoonsAzmoonId", "TestQuestionsTestQuestionId");
 
@@ -68,11 +68,11 @@ namespace Exam_Web.DataLayer.Migrations
 
             modelBuilder.Entity("Exam_Web.DataLayer.Entities.TestQuestion", b =>
                 {
-                    b.Property<int>("TestQuestionId")
+                    b.Property<long>("TestQuestionId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TestQuestionId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("TestQuestionId"), 1L, 1);
 
                     b.Property<string>("Gozine1")
                         .HasColumnType("nvarchar(max)");
@@ -107,11 +107,14 @@ namespace Exam_Web.DataLayer.Migrations
                     b.Property<long>("AzmoonId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("TestQuestionId")
-                        .HasColumnType("int");
+                    b.Property<long>("TestQuestionId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("UserIdentityId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Answer")
+                        .HasColumnType("int");
 
                     b.HasKey("AzmoonId", "TestQuestionId", "UserIdentityId");
 
@@ -119,7 +122,7 @@ namespace Exam_Web.DataLayer.Migrations
 
                     b.HasIndex("UserIdentityId");
 
-                    b.ToTable("User_Azmoon_Test_Answer");
+                    b.ToTable("User_Azmoon_Test_Answers");
                 });
 
             modelBuilder.Entity("Exam_Web.DataLayer.Entities.UserIdentity", b =>

@@ -57,6 +57,14 @@ namespace Exam_Web.CoreLayer.Services.Users
             var result = await _userManager.CreateAsync(user, RegisterDto.Password);
             return result;
         }
+
+        public async Task<string> GetIdByUserName(string userName)
+        {
+
+            var x = await _userManager.FindByNameAsync(userName);
+            return x.Id;
+
+        }
     }
 
 

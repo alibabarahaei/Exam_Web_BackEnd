@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Exam_Web.DataLayer.Migrations
 {
     [DbContext(typeof(ExamContext))]
-    [Migration("20220723185126_User_Azmoon_Test_Answer has 3 key")]
-    partial class User_Azmoon_Test_Answerhas3key
+    [Migration("20220801073708_error2")]
+    partial class error2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,8 +29,8 @@ namespace Exam_Web.DataLayer.Migrations
                     b.Property<long>("AzmoonsAzmoonId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("TestQuestionsTestQuestionId")
-                        .HasColumnType("int");
+                    b.Property<long>("TestQuestionsTestQuestionId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("AzmoonsAzmoonId", "TestQuestionsTestQuestionId");
 
@@ -70,11 +70,11 @@ namespace Exam_Web.DataLayer.Migrations
 
             modelBuilder.Entity("Exam_Web.DataLayer.Entities.TestQuestion", b =>
                 {
-                    b.Property<int>("TestQuestionId")
+                    b.Property<long>("TestQuestionId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TestQuestionId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("TestQuestionId"), 1L, 1);
 
                     b.Property<string>("Gozine1")
                         .HasColumnType("nvarchar(max)");
@@ -109,16 +109,13 @@ namespace Exam_Web.DataLayer.Migrations
                     b.Property<long>("AzmoonId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("TestQuestionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("id")
-                        .HasColumnType("int");
+                    b.Property<long>("TestQuestionId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("UserIdentityId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("AzmoonId", "TestQuestionId", "id");
+                    b.HasKey("AzmoonId", "TestQuestionId", "UserIdentityId");
 
                     b.HasIndex("TestQuestionId");
 
@@ -357,7 +354,8 @@ namespace Exam_Web.DataLayer.Migrations
                     b.HasOne("Exam_Web.DataLayer.Entities.UserIdentity", null)
                         .WithMany("UserId")
                         .HasForeignKey("UserIdentityId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

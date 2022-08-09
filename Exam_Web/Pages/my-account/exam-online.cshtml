@@ -2,6 +2,11 @@
 
 @model Exam_Web.Pages.my_account.exam_onlineModel
 
+
+
+
+
+
 @section MetaTags
 {
    
@@ -22,54 +27,57 @@
                 <div class="col">
                     آزمون مطالعات اجتماعی
                 </div>
-
+                
             </div>
 
             <div class="row background_question p-5">
 
-                
-                @{foreach (var Question in @Model.QuestionList)
-                    {
-                        <div class="row mb-4">
-                            <div class="col ">
-                                <div class="row mb-2">
-                                    <div class="col"><span>1_</span>@Question.Question</div>
-                                </div>
-                                <div class="row ">
-                                    <div class="col">
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label text-break" for="flexCheckDefault">
-                                                @Question.Gozine1
-                                            </label>
-                                        </div>
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                                   checked>
-                                            <label class="form-check-label" for="flexCheckChecked">
-                                                @Question.Gozine2
-                                            </label>
-                                        </div>
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                                   checked>
-                                            <label class="form-check-label" for="flexCheckChecked">
-                                                @Question.Gozine3
-                                            </label>
-                                        </div>
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                                   checked>
-                                            <label class="form-check-label" for="flexCheckChecked">
-                                                @Question.Gozine4
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <form method="post">
+                    <input type="hidden"  name="Id_Azmoon" value="@ViewData["IdAzmoon"]">
+                    @{foreach (var Question in @Model.QuestionList_Sender.Select((name, index) => (name, index)))
+                      {
+                          @Question.index
+                          <div class="row mb-4">
+                              <div class="col ">
+                                  <div class="row mb-2">
+                                      <div class="col"><span>1_</span>@Question.name.Question</div>
+                                  </div>
+                                  <div class="row ">
+                                      <div class="col">
+                                          <div class="form-check mt-2">
+                                              <input class="form-check-input" type="checkbox" asp-for="AnswernList_Reciver[Question.index][0]">
+                                              <label class="form-check-label text-break">
+                                                  @Question.name.Gozine1
+                                              </label>
+                                          </div>
+                                          <div class="form-check mt-2">
+                                              <input class="form-check-input" type="checkbox" asp-for="AnswernList_Reciver[Question.index][1]">
+                                              <label class="form-check-label">
+                                                  @Question.name.Gozine2
+                                              </label>
+                                          </div>
+                                          <div class="form-check mt-2">
+                                              <input class="form-check-input" type="checkbox" asp-for="AnswernList_Reciver[Question.index][2]">
+                                              <label class="form-check-label">
+                                                  @Question.name.Gozine3
+                                              </label>
+                                          </div>
+                                          <div class="form-check mt-2">
+                                              <input class="form-check-input" type="checkbox" asp-for="AnswernList_Reciver[Question.index][3]">
+                                              <label class="form-check-label">
+                                                  @Question.name.Gozine4
+                                              </label>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      }
                     }
-                }
+                    <button class="btn-form-login mb-3" type="submit">
+                        ورود
+                    </button>
+                </form>
             </div>
 
 

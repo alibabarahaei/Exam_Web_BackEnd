@@ -15,7 +15,7 @@ namespace Exam_Web.DataLayer.Context
 
         public DbSet<TestQuestion> TestQuestions { get; set; }
         public DbSet<Azmoon> Azmoons { get; set; }
-
+        public DbSet<User_Azmoon_Test_Answer> User_Azmoon_Test_Answers { get; set;}
 
 
 
