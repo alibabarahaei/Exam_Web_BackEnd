@@ -1,3 +1,4 @@
+using Exam_Web.CoreLayer.DTOs.Questions;
 using Exam_Web.CoreLayer.Services.Exam;
 using Exam_Web.DataLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,7 @@ namespace Exam_Web.Pages.my_account
         private readonly IExamService _examService;
 
 
-        public List<TestQuestion> QuestionList_Sender { get; set; }
+        public TestQuestionFilterDto QuestionList_Sender { get; set; }
 
         public long Id_Azmoon { get; set; }
 
@@ -46,10 +47,10 @@ namespace Exam_Web.Pages.my_account
 
         }
 
-        public void OnGet()
+        public void OnGet(int PageId,int IdAzmoon)
         {
 
-            QuestionList_Sender = _examService.GetQuestionsByAzmoon(1);
+            QuestionList_Sender = _examService.GetQuestionsByFilter(1,10, PageId);
             ViewData["IdAzmoon"] = 1;
 
 

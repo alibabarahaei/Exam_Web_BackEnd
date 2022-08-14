@@ -1,0 +1,59 @@
+﻿@page
+@model Exam_Web.Pages.my_account.panel_teacher.azmoonModel
+@{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-auto"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+                
+            @{
+                foreach (var azmoon in @Model.All_Azmoon)
+                {
+
+                    <div class="col-auto">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">@azmoon.Title</h5>
+                                
+                                <a asp-page="./edit-azmoon" asp-route-idazmoon="@azmoon.AzmoonId"  class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                }
+            }
+                
+                </div>
+        </div>
+
+
+
+

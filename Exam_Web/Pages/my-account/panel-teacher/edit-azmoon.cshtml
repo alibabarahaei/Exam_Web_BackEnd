@@ -1,0 +1,43 @@
+﻿@page 
+@model Exam_Web.Pages.my_account.panel_teacher.edit_azmoonModel
+@{
+}
+
+
+
+<div class="container">
+    <div class="row">
+                <form method="post">
+        @{
+            foreach (var question in @Model._questions)
+            {
+
+                <div class="col-12">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">@question.Question</h5>
+                            <p>@question.Gozine1</p>   
+                            <br/>
+                            <p>@question.Gozine2</p>   
+                            <br/>
+                            <p>@question.Gozine3</p>   
+                            <br/>
+                            <p>@question.Gozine4</p>   
+                            <br/>
+                          
+                        </div>
+                    </div>
+
+
+                </div>
+                
+                <a asp-page-handler="deletetest" asp-route-idazmoon1="@Model._idazmoon" asp-route-idtest="@question.TestQuestionId">delete</a>
+
+
+
+            }
+        }
+        </form> 
+    </div>
+</div>
+

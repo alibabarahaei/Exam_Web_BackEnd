@@ -35,6 +35,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbXktYWNjb3VudFxleGFtLW9ubGluZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Amir/Project/Exam_Web_BackEnd/Exam_Web/Pages/my-account/panel-teacher/azmoon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbXktYWNjb3VudFxwYW5lbC10ZWFjaGVyXGF6bW9vbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Amir/Project/Exam_Web_BackEnd/Exam_Web/Pages/my-account/panel-teacher/edit-azmoon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbXktYWNjb3VudFxwYW5lbC10ZWFjaGVyXGVkaXQtYXptb29uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Amir/Project/Exam_Web_BackEnd/Exam_Web/Pages/my-account/panel-teacher/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbXktYWNjb3VudFxwYW5lbC10ZWFjaGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Amir/Project/Exam_Web_BackEnd/Exam_Web/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

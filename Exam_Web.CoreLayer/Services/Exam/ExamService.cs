@@ -1,4 +1,5 @@
-﻿using Exam_Web.CoreLayer.Services.Users;
+﻿using Exam_Web.CoreLayer.DTOs.Questions;
+using Exam_Web.CoreLayer.Services.Users;
 using Exam_Web.DataLayer.Context;
 using Exam_Web.DataLayer.Entities;
 
@@ -34,10 +35,7 @@ namespace Exam_Web.CoreLayer.Services.Exam
 
             foreach (var x in Answers.Select((answer, index) => (answer, index)))
             {
-                Console.WriteLine(Questions[x.index].TestQuestionId);
-                Console.WriteLine(Id_Azmoon);
-                Console.WriteLine(UserId);
-                Console.WriteLine(Answers[x.index].FindIndex(y => y == true) + 1);
+            
                 _context.User_Azmoon_Test_Answers.Add(new User_Azmoon_Test_Answer()
                 {
                     TestQuestionId = Questions[x.index].TestQuestionId,
@@ -50,6 +48,28 @@ namespace Exam_Web.CoreLayer.Services.Exam
 
             _context.SaveChanges();
             return;
+        }
+
+        public List<Azmoon> GetAllAzmoons()
+        {
+            return _context.Azmoons.ToList();
+        }
+
+        public TestQuestionFilterDto GetQuestionsByFilter(long AzmoonId, int Take, int PageId = 1)
+        {
+            if (PageId == 0)
+            {
+                PageId = 1;
+            }
+            var allquestions=_context.Azmoons.Where(a => a.AzmoonId == AzmoonId).SelectMany(t => t.TestQuestions);
+            var skip = (PageId - 1) * Take;
+            decimal x = allquestions.Count() / (decimal)Take;
+            var pagecount = Math.Ceiling(x);
+            return new TestQuestionFilterDto()
+            {
+               PageCount = (int)pagecount,
+               Questions = allquestions.Skip(skip).Take(Take).ToList()
+            };
         }
     }
 }

@@ -34,7 +34,7 @@
 
                 <form method="post">
                     <input type="hidden"  name="Id_Azmoon" value="@ViewData["IdAzmoon"]">
-                    @{foreach (var Question in @Model.QuestionList_Sender.Select((name, index) => (name, index)))
+                    @{foreach (var Question in @Model.QuestionList_Sender.Questions.Select((name, index) => (name, index)))
                       {
                           @Question.index
                           <div class="row mb-4">
@@ -78,6 +78,23 @@
                         ورود
                     </button>
                 </form>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-lg">
+                            @{
+                                for (int i = 1; i <=  @Model.QuestionList_Sender.PageCount; i++)
+                                {
+                                    <li class="page-item"><a class="page-link"  asp-route-PageId="@i">@i</a></li>
+                                }
+                            }
+                            
+
+                           
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
 

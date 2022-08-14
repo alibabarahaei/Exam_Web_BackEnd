@@ -31,4 +31,12 @@
     <Folder Include="wwwroot\font\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\img\icons\arrows-h.svg" />
+    <None Include="wwwroot\img\icons\cloud-download.svg" />
+    <None Include="wwwroot\img\icons\edit-alt.svg" />
+    <None Include="wwwroot\img\icons\left-arrow-from-left.svg" />
+    <None Include="wwwroot\img\icons\paragraph.svg" />
+  </ItemGroup>
+
 </Project>
