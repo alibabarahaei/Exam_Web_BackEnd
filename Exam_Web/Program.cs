@@ -44,8 +44,12 @@ builder.Services.AddDbContext<ExamContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
-
-
+builder.Services.AddAuthentication()
+    .AddGoogle(options =>
+    {
+        options.ClientId = "62913900782-8ts3r1lkfl1tj8hfehufsvn6mvuapomj.apps.googleusercontent.com";
+        options.ClientSecret = "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";
+    });
 
 var app = builder.Build();
 

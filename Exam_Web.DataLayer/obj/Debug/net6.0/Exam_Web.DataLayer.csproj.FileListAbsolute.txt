@@ -1,7 +1,6 @@
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.DataLayer\bin\Debug\net6.0\Exam_Web.DataLayer.deps.json
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.DataLayer\bin\Debug\net6.0\Exam_Web.DataLayer.runtimeconfig.json
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.DataLayer\bin\Debug\net6.0\Exam_Web.DataLayer.dll
-C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.DataLayer\bin\Debug\net6.0\ref\Exam_Web.DataLayer.dll
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.DataLayer\bin\Debug\net6.0\Exam_Web.DataLayer.pdb
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.DataLayer\obj\Debug\net6.0\Exam_Web.DataLayer.csproj.AssemblyReference.cache
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.DataLayer\obj\Debug\net6.0\Exam_Web.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
@@ -26,3 +25,4 @@ C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.DataLayer\obj\De
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.DataLayer\obj\Debug\net6.0\ref\Exam_Web.DataLayer.dll
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.DataLayer\obj\Debug\net6.0\Exam_Web.DataLayer.pdb
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.DataLayer\obj\Debug\net6.0\Exam_Web.DataLayer.genruntimeconfig.cache
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.DataLayer\obj\Debug\net6.0\refint\Exam_Web.DataLayer.dll

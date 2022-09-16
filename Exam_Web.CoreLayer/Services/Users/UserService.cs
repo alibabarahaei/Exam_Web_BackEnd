@@ -3,6 +3,7 @@ using Exam_Web.DataLayer.Context;
 using Exam_Web.DataLayer.Entities;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Exam_Web.CoreLayer.Services.Users
 {
@@ -44,6 +45,32 @@ namespace Exam_Web.CoreLayer.Services.Users
             return await _userManager.FindByEmailAsync(email);
         }
 
+        public async Task<UserIdentity> FindByEmailAsync(string email)
+        {
+           return await _userManager.FindByNameAsync(email);
+        }
+
+        public async Task<IdentityResult> CreateUserAsync(UserIdentity user)
+        {
+            return await _userManager.CreateAsync(user);
+        }
+
+        public async Task<IdentityResult> AddLoginAsync(UserIdentity user,UserLoginInfo info)
+        {
+            return await _userManager.AddLoginAsync(user, info);
+        }
+
+        public async Task<IEnumerable<AuthenticationScheme>> GetExternalAuthenticationSchemesAsync()
+        {
+            return await _signInManager.GetExternalAuthenticationSchemesAsync();
+        }
+
+        public AuthenticationProperties ConfigureExternalAuthenticationProperties(string provider, string redirectUrl)
+        {
+            return _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+        }
+
+       
 
         public async Task<IdentityResult> RegisterUser(RegisterUserDto RegisterDto)
         {
@@ -64,6 +91,22 @@ namespace Exam_Web.CoreLayer.Services.Users
             var x = await _userManager.FindByNameAsync(userName);
             return x.Id;
 
+        }
+
+        public async Task<ExternalLoginInfo> GetExternalLoginInfoAsync()
+        {
+            return await _signInManager.GetExternalLoginInfoAsync();
+        }
+
+        public async Task<SignInResult> ExternalLoginSignInAsync(string LoginProvider, string ProviderKey, bool isPersistent, bool bypassTwoFactor)
+        {
+            return await _signInManager.ExternalLoginSignInAsync(LoginProvider,
+                ProviderKey, isPersistent, bypassTwoFactor);
+        }
+
+        public async Task SignInAsync(UserIdentity user, bool isPersistent)
+        {
+            await _signInManager.SignInAsync(user, isPersistent);
         }
     }
 

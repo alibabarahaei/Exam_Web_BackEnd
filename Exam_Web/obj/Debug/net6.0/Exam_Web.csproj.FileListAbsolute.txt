@@ -57,7 +57,6 @@ C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Exam_Web.exe
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Exam_Web.deps.json
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Exam_Web.runtimeconfig.json
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Exam_Web.dll
-C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\ref\Exam_Web.dll
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Exam_Web.pdb
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\obj\Debug\net6.0\Exam_Web.csproj.AssemblyReference.cache
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\obj\Debug\net6.0\Exam_Web.GeneratedMSBuildEditorConfig.editorconfig
@@ -188,3 +187,5 @@ C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.Extensions.
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\AutoMapper.dll
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\libman.json
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web\obj\Debug\net6.0\refint\Exam_Web.dll

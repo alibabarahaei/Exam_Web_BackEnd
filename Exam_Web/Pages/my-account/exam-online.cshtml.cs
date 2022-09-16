@@ -56,10 +56,11 @@ namespace Exam_Web.Pages.my_account
 
         }
 
-        public async Task OnPost()
+        public async Task<IActionResult> OnPost()
         {
 
-            await _examService.Import_Question_Answer_User(AnswernList_Reciver, Id_Azmoon, User.Identity.Name);
+           //await _examService.Import_Question_Answer_User(AnswernList_Reciver, Id_Azmoon, User.Identity.Name);
+           return RedirectToPage("../Index");
 
         }
 

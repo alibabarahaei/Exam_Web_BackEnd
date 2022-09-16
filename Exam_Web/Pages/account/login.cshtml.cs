@@ -3,6 +3,10 @@ using Exam_Web.CoreLayer.Services.Users;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
+using Exam_Web.DataLayer.Entities;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
 
 namespace Exam_Web.Pages.account
 {
@@ -11,10 +15,11 @@ namespace Exam_Web.Pages.account
     public class loginModel : PageModel
     {
         private readonly IUserService _userService;
-
+        
         public loginModel(IUserService userService)
         {
             _userService = userService;
+            
         }
 
 
@@ -32,10 +37,34 @@ namespace Exam_Web.Pages.account
         [Display(Name = "یادآوری کلمه عبور")]
         public bool RememberMe { get; set; }
 
-        public void OnGet()
+
+
+
+
+
+
+        public string ReturnUrl { get; set; }
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
+
+
+
+
+
+
+
+
+
+        public async Task OnGet()
         {
-           
-            var x = User;
+
+
+            ReturnUrl = "%2F";
+            ExternalLogins = (await _userService.GetExternalAuthenticationSchemesAsync()).ToList();
+            
+
+            ViewData["returnUrl"] = ReturnUrl;
+            
+
         }
 
         public async Task<IActionResult> OnPost()
@@ -86,7 +115,74 @@ namespace Exam_Web.Pages.account
             return isRememberMe ? DateTime.UtcNow.AddDays(30) : DateTime.UtcNow.AddDays(1);
         }
 
+        
+        public IActionResult OnPostExternalLogin(string provider, string returnUrl)
+        {
+            var redirectUrl = "https://localhost:7271/account/login/?handler=ExternalLoginCallBack";
 
+
+
+            var properties = _userService.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            return new ChallengeResult(provider, properties);
+        }
+
+        public async Task<IActionResult> OnGetExternalLoginCallBack(string returnUrl = null, string remoteError = null)
+        {
+            returnUrl =
+                (returnUrl != null && Url.IsLocalUrl(returnUrl)) ? returnUrl : Url.Content("~/");
+
+
+            ReturnUrl = returnUrl;
+                ExternalLogins = (await _userService.GetExternalAuthenticationSchemesAsync()).ToList();
+            
+
+            if (remoteError != null)
+            {
+                ModelState.AddModelError("", $"Error : {remoteError}");
+                return Page();
+            }
+
+            var externalLoginInfo = await _userService.GetExternalLoginInfoAsync();
+            if (externalLoginInfo == null)
+            {
+                ModelState.AddModelError("ErrorLoadingExternalLoginInfo", $"مشکلی پیش آمد");
+                return Page();
+            }
+
+            var signInResult = await _userService.ExternalLoginSignInAsync(externalLoginInfo.LoginProvider,
+                externalLoginInfo.ProviderKey, false, true);
+
+            if (signInResult.Succeeded)
+            {
+                return RedirectToPage("Login", "ExternalLoginCallBack");
+            }
+
+            var email = externalLoginInfo.Principal.FindFirstValue(ClaimTypes.Email);
+
+            if (email != null)
+            {
+                var user = await _userService.FindByEmailAsync(email);
+                if (user == null)
+                {
+                    var userName = email.Split('@')[0];
+                    user = new UserIdentity()
+                    {
+                        UserName = (userName.Length <= 10 ? userName : userName.Substring(0, 10)),
+                        Email = email,
+                        EmailConfirmed = true
+                    };
+
+                    await _userService.CreateUserAsync(user);
+                }
+
+                await _userService.AddLoginAsync(user, externalLoginInfo);
+                await _userService.SignInAsync(user, false);
+
+                return Redirect(returnUrl);
+            }
+
+            return Page();
+        }
     }
 
 

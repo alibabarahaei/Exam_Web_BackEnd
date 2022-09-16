@@ -36,11 +36,11 @@
                     <input type="hidden"  name="Id_Azmoon" value="@ViewData["IdAzmoon"]">
                     @{foreach (var Question in @Model.QuestionList_Sender.Questions.Select((name, index) => (name, index)))
                       {
-                          @Question.index
+                        
                           <div class="row mb-4">
                               <div class="col ">
                                   <div class="row mb-2">
-                                      <div class="col"><span>1_</span>@Question.name.Question</div>
+                                    <div class="col"><span>@(Question.index+1)</span>@Question.name.Question</div>
                                   </div>
                                   <div class="row ">
                                       <div class="col">

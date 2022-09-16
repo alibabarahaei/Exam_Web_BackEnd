@@ -3,6 +3,7 @@ using Exam_Web.CoreLayer.Services.Users;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Exam_Web.Pages.account
 {
@@ -35,6 +36,14 @@ namespace Exam_Web.Pages.account
         [MinLength(8, ErrorMessage = "{0} باید بیشتر از 7 کاراکتر باشد")]
         [StringLength(30, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 8)]
         public string Password { get; set; }
+
+
+
+
+
+        
+
+
 
         #endregion
 

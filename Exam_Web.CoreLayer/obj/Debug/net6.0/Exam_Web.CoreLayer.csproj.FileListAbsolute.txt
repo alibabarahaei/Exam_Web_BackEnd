@@ -1,6 +1,5 @@
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.CoreLayer.deps.json
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.CoreLayer.dll
-C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\ref\Exam_Web.CoreLayer.dll
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\bin\Debug\net6.0\Exam_Web.CoreLayer.pdb
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.csproj.AssemblyReference.cache
 C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
@@ -28,3 +27,4 @@ C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\De
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.dll
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\ref\Exam_Web.CoreLayer.dll
 C:\Users\user\Desktop\New folder (11)\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\Exam_Web.CoreLayer.pdb
+C:\Amir\Project\Exam_Web_BackEnd\Exam_Web.CoreLayer\obj\Debug\net6.0\refint\Exam_Web.CoreLayer.dll

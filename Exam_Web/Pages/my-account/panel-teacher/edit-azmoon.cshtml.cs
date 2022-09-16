@@ -14,10 +14,10 @@ namespace Exam_Web.Pages.my_account.panel_teacher
 
         private readonly IExamService _examService;
 
-
-        public long? _idazmoon;
-        public List<TestQuestion>? _questions;
-
+        
+        public long? _idazmoon { get; set; }
+        public List<TestQuestion>? _questions { get; set; }
+        
 
         public edit_azmoonModel(IExamService examService)
         {
@@ -28,7 +28,7 @@ namespace Exam_Web.Pages.my_account.panel_teacher
         
         public void OnGet()
         {
-            var idazmoon = 1;
+            var idazmoon = 2;
             _idazmoon = idazmoon;
 
         _questions = _examService.GetQuestionsByAzmoon(idazmoon);
@@ -36,11 +36,13 @@ namespace Exam_Web.Pages.my_account.panel_teacher
 
         }
       
-        public IActionResult OnGetdeletetest(long idazmoon1, long idtest)
+        public IActionResult OnGetDeletetest(int id)
         {
-            var x = idazmoon1 + idtest;
+            
             throw new Exception("sdada");
             RedirectToPage();
         }
     }
+
+    
 }
